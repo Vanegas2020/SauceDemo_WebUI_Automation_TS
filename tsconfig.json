@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    // Language and Environment
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+
+    // Type Checking
+    "strict": true,
+
+    // Additional Checks
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Module Resolution
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+
+    // Path Aliases
+    "baseUrl": ".",
+    "paths": {
+      "@pages": ["pages/index.ts"],
+      "@pages/*": ["pages/*"],
+      "@utils": ["utils/index.ts"],
+      "@utils/*": ["utils/*"],
+      "@fixtures": ["fixtures/index.ts"],
+      "@fixtures/*": ["fixtures/*"],
+      "@data": ["data/index.ts"],
+      "@data/*": ["data/*"]
+    },
+
+    // Type Declarations
+    "types": ["node", "@playwright/test"]
+  },
+
+  // Files to include
+  "include": [
+    "tests/**/*.ts",
+    "pages/**/*.ts",
+    "utils/**/*.ts",
+    "fixtures/**/*.ts",
+    "data/**/*.ts",
+    "playwright.config.ts"
+  ],
+
+  // Files to exclude
+  "exclude": [
+    "node_modules",
+    "test-results",
+    "playwright-report",
+    "dist"
+  ]
+}

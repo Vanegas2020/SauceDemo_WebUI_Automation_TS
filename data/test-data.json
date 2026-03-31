@@ -1,0 +1,73 @@
+{
+  "$schema": "./test-data.schema.json",
+  "metadata": {
+    "projectName": "SauceDemo_WebUI_Automation_TS",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-03",
+    "description": "Test data for SauceDemo_WebUI_Automation_TS automation tests"
+  },
+  "users": {
+    "valid": {
+      "username": "",
+      "password": "",
+      "displayName": "",
+      "role": "user"
+    },
+    "invalid": [
+      {
+        "username": "invalid_user",
+        "password": "wrong_password",
+        "expectedError": "Invalid credentials"
+      },
+      {
+        "username": "nonexistent",
+        "password": "password123",
+        "expectedError": "User not found"
+      },
+      {
+        "username": "",
+        "password": "",
+        "expectedError": "Required fields missing"
+      }
+    ]
+  },
+  "urls": {
+    "base": "https://www.saucedemo.com",
+    "login": "https://www.saucedemo.com/",
+    "home": "https://www.saucedemo.com"
+  },
+  "timeouts": {
+    "short": 5000,
+    "medium": 15000,
+    "long": 30000,
+    "navigation": 60000
+  },
+  "viewport": {
+    "mobile": {
+      "width": 375,
+      "height": 667
+    },
+    "tablet": {
+      "width": 768,
+      "height": 1024
+    },
+    "desktop": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "testEnvironments": {
+    "dev": {
+      "url": "http://localhost:3000",
+      "apiUrl": "http://localhost:3000/api"
+    },
+    "staging": {
+      "url": "https://staging.example.com",
+      "apiUrl": "https://staging.example.com/api"
+    },
+    "production": {
+      "url": "https://www.saucedemo.com",
+      "apiUrl": "https://www.saucedemo.com/api"
+    }
+  }
+}
