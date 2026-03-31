@@ -29,10 +29,10 @@ jobs:
 
     - name: Run Playwright tests
       env:
-        BASE_URL: ${{ secrets.BASE_URL }}
-        LOGIN_URL: ${{ secrets.LOGIN_URL }}
-        TEST_USER_ADMIN_USERNAME: ${{ secrets.TEST_USER_ADMIN_USERNAME }}
-        TEST_USER_ADMIN_PASSWORD: ${{ secrets.TEST_USER_ADMIN_PASSWORD }}
+        BASE_URL: https://www.saucedemo.com
+        LOGIN_URL: https://www.saucedemo.com/
+        TEST_USER_ADMIN_USERNAME: standard_user
+        TEST_USER_ADMIN_PASSWORD: secret_sauce
       run: npx playwright test
 
     - name: Upload test results

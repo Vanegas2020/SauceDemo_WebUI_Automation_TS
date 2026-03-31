@@ -104,18 +104,9 @@ Tests run automatically on every push and pull request via GitHub Actions:
 - **Node.js 24** on `ubuntu-latest`
 - All three browsers: Chromium, Firefox, WebKit
 - Playwright HTML report and test results uploaded as artifacts (30-day retention)
-- `BASE_URL`, `LOGIN_URL`, and credentials configurable via repository secrets
+- SauceDemo credentials are public (`standard_user` / `secret_sauce`) — no secrets required
 
 See [`.github/workflows/playwright.yml`](.github/workflows/playwright.yml).
-
-### Required Secrets
-
-| Secret | Description |
-|--------|-------------|
-| `BASE_URL` | Override base URL (default: `https://www.saucedemo.com`) |
-| `LOGIN_URL` | Override login page URL |
-| `TEST_USER_ADMIN_USERNAME` | Test account username |
-| `TEST_USER_ADMIN_PASSWORD` | Test account password |
 
 ---
 
